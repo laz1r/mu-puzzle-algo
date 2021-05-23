@@ -1,25 +1,25 @@
-		//Rule 1: If you possess a string whose last letter is I,
-		//	you can add on a U at the end		
-		// ** Check if last letter is I
-		//    If yes
-		//    Add U or Leave alone
+//Rule 1: If you possess a string whose last letter is I,
+//	you can add on a U at the end		
+// ** Check if last letter is I
+//    If yes
+//    Add U or Leave alone
 		
-		//Rule 2: Suppose you have Mx. Then you may add Mxx to your collection	
-		// ** Mx. Can add Mxx
-		//    x = any string (how long can I make this?)
-		// if(first char M)
-		//   Can add (x) or leave alone
+//Rule 2: Suppose you have Mx. Then you may add Mxx to your collection	
+// ** Mx. Can add Mxx
+//    x = any string (how long can I make this?)
+// if(first char M)
+//   Can add (x) or leave alone
 		
-		//Rule 3: If III occurs in one of the strings in your collection 
-		//	you may make a new string with U in place of III
-		// ** if "III" in string, can switch to "U"
-		// if("III" in string)
-		//  can replace with "U" or leave alone
+//Rule 3: If III occurs in one of the strings in your collection 
+//	you may make a new string with U in place of III
+// ** if "III" in string, can switch to "U"
+// if("III" in string)
+//  can replace with "U" or leave alone
 		
-		//Rule 4: if UU occurs inside one of your string, you can drop it
-		// ** If "UU" occurs in string, can remove
-		// if("UU" in string)
-		//   can remove or leave alone
+//Rule 4: if UU occurs inside one of your string, you can drop it
+// ** If "UU" occurs in string, can remove
+// if("UU" in string)
+//   can remove or leave alone
 
 import java.util.Scanner;
 
@@ -44,7 +44,6 @@ public class MUpuzzleUser {
 		String rule3;
 		String rule4;
 			
-	
 		System.out.println("MU Puzzle Bot v0.0.1");
 		System.out.println("from Godel, Escher, Bach");
 		System.out.println(" ");
@@ -100,10 +99,7 @@ public class MUpuzzleUser {
 			}
 		}
 		
-		
-
 	}
-	
 	// ** ADD U at the end, 
 	// not replace !!
 	public static String rule1(String userInput, int indexEndOfString) {
@@ -167,12 +163,6 @@ public class MUpuzzleUser {
 			return userInput;
 		}
 	}
-	
-	//Rule 4: if UU occurs inside one of your string, you can drop it
-	// ** If "UU" occurs in string, can remove
-	// if("UU" in string)
-	//   can remove or leave alone
-	
 	public static String rule4(String userInput) {
 		int random = random();
 		if(userInput.contains("UU")) {
@@ -191,10 +181,8 @@ public class MUpuzzleUser {
 		}
 		
 	}
-	
 	public static int random() {
 		int random = (int)Math.floor(Math.random() * 10) + 1;
 		return random;
 	}
-
 }
