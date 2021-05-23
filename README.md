@@ -1,1 +1,3 @@
 # mu-puzzle-algo
+
+My algorithm to attempt to solve the MU puzzle...
