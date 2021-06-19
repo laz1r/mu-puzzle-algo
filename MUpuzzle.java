@@ -27,16 +27,9 @@ public class MUpuzzleUser {
 
 	public static void main(String[] args) {
 		
-		//String M = "M";
-		//String I = "I";
-		//String U = "U";
-		//String start = "MI";
-		//char holder;
+		
 		boolean test = true;
 		int count = 0;
-		//int tester = 0;
-		//String testString = "MIUUMIIIUI";
-		//Scanner myObj = new Scanner(System.in);
 		String userInput = "MI";
 		int indexEndOfString = userInput.length()-1;
 		String rule1;
@@ -50,43 +43,21 @@ public class MUpuzzleUser {
 		System.out.println(" ");
 		System.out.println(" ");
 		
-		/* Testing random occurences
-		int random = random();
-		int i = 0;
-		int countLessThanOrEqualTo5 = 0;
-		int countGreatThan5 = 0;
-		
-		while(i < 2000) {
-			
-			if(random <= 5) {
-				countLessThanOrEqualTo5++;
-				//System.out.println("Less than or equal to 5: " + countLessThanOrEqualTo5);
-			}else {
-				countGreatThan5++;
-				//System.out.println("Greater than 5: " + countGreatThan5);
-			}
-			random = random();
-			i++;
-		}
-		System.out.println("Less than or equal to 5: " + countLessThanOrEqualTo5);
-		System.out.println("Greater than 5: " + countGreatThan5);
-		*/
-		
 		
 		while(test) {
-			//userInput = myObj.nextLine();
+			
 			
 			rule1 = rule1(userInput,indexEndOfString);
-			//System.out.println("String after rule1: " + rule1);
+			
 			rule2 = rule2(rule1);
-			//System.out.println("String after rule2: " + rule2);
+			
 			rule3 = rule3(rule2);
-			//System.out.println("String after rule3: " + rule3);
+			
 			rule4 = rule4(rule3);
-			//System.out.println("String after rule4: " + rule4);
+			
 			count++;
 			System.out.println("End of loop - " + count);
-			//System.out.println("--------------------------");
+			
 			
 			
 			//Print out present string
@@ -107,8 +78,7 @@ public class MUpuzzleUser {
 		StringBuilder myString = new StringBuilder(userInput);
 		char holder = userInput.charAt(indexEndOfString);
 		if(holder == 'I') {
-			// change random <= 5
-			// to true
+			
 			if(true) {
 				myString.append('U');
 				return myString.toString();
@@ -127,7 +97,7 @@ public class MUpuzzleUser {
 		char holder = userInput.charAt(0);
 		
 		if(holder == 'M') {
-			// changed random <= 5 to true
+			
 			if(true) {
 				// ** Works as needed. Collects all string 
 				//		left of M
@@ -141,10 +111,6 @@ public class MUpuzzleUser {
 			return userInput;
 		}
 	}
-	
-	//*** Pinpointing which set of III in string to replace is tough
-	//    
-	//    For now, replace first occurrence of "III"
 	
 	public static String rule3(String userInput) {
 		int random = random();
